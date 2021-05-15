@@ -1,0 +1,15 @@
+pipeline {	 
+	agent any	 
+    	stages {     	 
+    	stage("Compile") {          	 
+            	steps {               	 
+                	sh "cd calculator && mvn compile"          	 
+            	}     	 
+        	}     	 
+    	stage("Unit test") {          	 
+        	steps {               	 
+                	sh "cd calculator && mvn test"          	 
+            	}     	 
+        	}	 
+    	}
+}
